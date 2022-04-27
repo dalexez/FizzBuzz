@@ -22,7 +22,7 @@ describe("Unit Tests for ExplorerService Class", () => {
         const explorers = [{githubUsername: "dalexez", mission: "node"}, {githubUsername: "danex", mission: "java"}, {githubUsername:"dalex", mission: "node"}]
         const explorersUsernameInMission  = ExplorerService.getExplorersUsernamesByMission(explorers, "node")
        
-        expect(explorersUsernameInMission).toStrictEqual(["dalexez", "dalex"])
+        expect(explorersUsernameInMission).toStrictEqual(["dalexez", "dalex"])//Con toBe la prueba fallaba ya que por alguna razon toma diferentes los arreglos
         expect(explorersUsernameInMission.length).toBe(2)
     })
   })
