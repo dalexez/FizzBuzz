@@ -6,5 +6,6 @@ describe("Unit Tests for Reader Class", () => {
       const explorers  = Reader.readJsonFile("explorers.json")
        
       expect(explorers.length).toBe(15);
+      expect(explorers[1].name).toBe("Woopa2")
     });
   })
