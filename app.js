@@ -1,3 +1,4 @@
+const exp = require("constants");
 const fs = require("fs");
 
 // Part 1 Read json file ===========================
@@ -13,7 +14,7 @@ const explorersInNode = explorers.filter((explorer) => explorer.mission == "node
 // Part4: Get the explorer's usernames in Node
 const explorersInNodeToGetUsernames = explorers.filter((explorer) => explorer.mission == "node");
 const usernamesInNode = explorersInNodeToGetUsernames.map((explorer) => explorer.githubUsername);
-console.log(usernamesInNode)
+//console.log(usernamesInNode)
 
 // DEAD CODE: Part 5,6,7, please remove this and go to Part 8!
 
@@ -23,16 +24,33 @@ console.log(usernamesInNode)
 // Score: 5, Trick: 5.
 
 const assignFizzTrick = function(explorer){
-    if(explorer.score%3 === 0){
-        explorer.trick = "FIZZ";
+    if((explorer.score % 3 === 0) && (explorer.score % 5 === 0)){
+        explorer.trick = "FIZZBUZZ";
         return explorer;
+    }else if(explorer.score % 3 === 0){
+        explorer.trick = "FIZZ"
+        return explorer;
+    }else if(explorer.score % 5 === 0){
+        explorer.trick = "BUZZ"
+        return explorer
     }else{
         explorer.trick = explorer.score;
         return explorer;
     }
 };
 
-const explorersInNodeAndFizzTrick = explorersInNode.map((explorer) => assignFizzTrick(explorer));
+// const assignFizzTrick = function(explorer){
+//     if(explorer.score%3 === 0){
+//         explorer.trick = "FIZZ";
+//         return explorer;
+//     }else{
+//         explorer.trick = explorer.score;
+//         return explorer;
+//     }
+// };
+
+const explorersInNodeAndFizzTrick = explorers.map((explorer) => assignFizzTrick(explorer));
+console.log(explorersInNodeAndFizzTrick)
 
 // Part 6: Get a new list of explorers in node if the score number is divisible by 5, we need to set a new property called trick and set the value BUZZ, if not this value should be just the score
 //
