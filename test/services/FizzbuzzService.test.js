@@ -23,7 +23,7 @@ describe("Unit Tests for ExplorerService Class", () => {
         const explorer15 = {name: "Explorer15", score: 15}
         const explorerFizzbuzz15 = FizzbuzzService.applyValidationInExplorer(explorer15) // {name: "Explorer15", score: 15, trick: "FIZZBUZZ"}
 
-        expect(explorerFizzbuzz15.trick).toBe("FIZZBUZZ")
+        expect(explorerFizzbuzz15.trick).toBe("FIZZandBUZZ")
     })
 })
 
