@@ -19,7 +19,7 @@ describe("Unit Tests for ExplorerService Class", () => {
     })
     test('3) Test getExplorersUsernamesByMission', () => {
       
-        const explorers = [{githubUsername: "dalexez", mission: "node"}, {githubUsername: "danex", mission: "dalex"}, {githubUsername:"dalex", mission: "node"}]
+        const explorers = [{githubUsername: "dalexez", mission: "node"}, {githubUsername: "danex", mission: "java"}, {githubUsername:"dalex", mission: "node"}]
         const explorersUsernameInMission  = ExplorerService.getExplorersUsernamesByMission(explorers, "node")
        
         expect(explorersUsernameInMission).toStrictEqual(["dalexez", "dalex"])
