@@ -19,10 +19,10 @@ describe("Unit Tests for ExplorerService Class", () => {
     })
     test('3) Test getExplorersUsernamesByMission', () => {
       
-        const explorers = [{username: "dalexez", mission: "node"}, {username: "danex", mission: "java"}, {username:"dalex", mission: "node"}]
-        const explorersUsernameInMission  = ExplorerService.getExplorersNameByMission(explorers, "node")
+        const explorers = [{githubUsername: "dalexez", mission: "node"}, {githubUsername: "danex", mission: "dalex"}, {githubUsername:"dalex", mission: "node"}]
+        const explorersUsernameInMission  = ExplorerService.getExplorersUsernamesByMission(explorers, "node")
        
-        expect(explorersUsernameInMission).toBe([{username: "dalexez"}, {username: "dalex"}]);
-      
+        expect(explorersUsernameInMission).toStrictEqual(["dalexez", "dalex"])
+        expect(explorersUsernameInMission.length).toBe(2)
     })
   })
