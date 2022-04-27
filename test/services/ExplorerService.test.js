@@ -14,7 +14,7 @@ describe("Unit Tests for ExplorerService Class", () => {
         const explorers = [{mission: "node"}, {mission: "java"}, {mission: "node"}]
         const amountOfExplorersInMission  = ExplorerService.getAmountOfExplorersByMission(explorers, "node")
        
-        expect(amountOfExplorersInMission.length).toBe(2);
+        expect(amountOfExplorersInMission).toBe(2);
       
     });
   })
