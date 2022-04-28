@@ -9,6 +9,6 @@ describe('Unit Tests for ExplorerController Class', () => {
     test('2)Test for getExplorersUsernamesByMission on class ExplorerController', () => {
         const usernamesByMission = ExplorerController.getExplorersUsernamesByMission("node")
 
-        expect(usernamesByMission).toBe("10")
+        expect(usernamesByMission.length).toBe(10)
     })
 })
