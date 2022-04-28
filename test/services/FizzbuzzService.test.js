@@ -25,4 +25,10 @@ describe('Unit Tests for ExplorerService Class', () => {
 
     expect(explorerFizzbuzz15.trick).toBe('FIZZBUZZ');
   });
+  test('5)Test aplyValidationInNumber score = trick', () => {
+    const number = 1
+    const trick = FizzbuzzService.applyValidationInNumber(number);
+
+    expect(trick).toBe(number);
+  })
 });
