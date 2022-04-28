@@ -16,4 +16,9 @@ describe('Unit Tests for ExplorerController Class', () => {
 
     expect(amountByMission).toBe(5);
   });
+  test('4) Test for validationFizzbuzz on class ExplorerController', () => {
+    const validation = ExplorerController.validationFizzbuzz(15);
+
+    expect(validation).toBe("FIZZBUZZ");
+  });
 });
