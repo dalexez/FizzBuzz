@@ -2,7 +2,7 @@ const ExplorerController = require('./../../lib/controllers/ExplorerController')
 
 describe('Unit Tests for ExplorerController Class', () => {
     test('1) Test for getExplorerByMission', () => {
-        const explorersByMission = ExplorerController.getExplorerByMission("java")
+        const explorersByMission = ExplorerController.getExplorersByMission("java")
 
         expect(explorersByMission.length).toBe(5)
     })
