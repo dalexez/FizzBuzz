@@ -20,4 +20,11 @@ describe('Unit Tests for ExplorerService Class', () => {
     expect(explorersUsernameInMission).toStrictEqual(['dalexez', 'dalex']);// Con toBe la prueba fallaba ya que por alguna razon toma diferentes los arreglos
     expect(explorersUsernameInMission.length).toBe(2);
   });
+  test('4) Test getExplorersNamesByMission', () => {
+    const explorers = [{ name: 'Daniel', mission: 'node' }, { name: 'danex', mission: 'java' }, { name: 'dalex', mission: 'node' }];
+    const explorersUsernameInMission = ExplorerService.getExplorersNamesByMission(explorers, 'node');
+
+    expect(explorersUsernameInMission).toStrictEqual(['Daniel', 'dalex']);// Con toBe la prueba fallaba ya que por alguna razon toma diferentes los arreglos
+    expect(explorersUsernameInMission.length).toBe(2);
+  });
 });
